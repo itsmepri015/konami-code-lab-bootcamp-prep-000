@@ -1,21 +1,47 @@
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-	
-
-let index = 0;
-  function init() {
-  
-  input.addEventListener('keydown', onKeyDownHandler);
-   function onKeyDownHandler(e) {
-    const pressedKey = parseInt(e.detail || e.which);
-    console.log(e.which);
-     if (pressedKey === code[index]) {
-      index++;
-       if (index === code.length) {
-        alert(`Congrats, you unlocked the Konami code!`);
-        index = 0;
-      }
-    } else {
-      index = 0;
-    }
+function init() {
+  // your code here	  const input = document.querySelector('body')
+  input.addEventListener('keydown', function(e) {
+   switch(index){
+     case 0:
+       index = (e.which === 38) ? 1 : 0;
+       break;
+     case 1:
+       index = (e.which === 38) ? 2 : 0;
+       break;
+     case 2:
+       index = (e.which === 40) ? 3 : 0;
+       break;
+     case 3:
+       index = (e.which === 40) ? 4 : 0;
+       break;
+     case 4:
+       index = (e.which === 37) ? 5 : 0;
+       break;
+     case 5:
+       index = (e.which === 39) ? 6 : 0;
+       break;
+     case 6:
+       index = (e.which === 37) ? 7: 0;
+       break;
+     case 7:
+       index = (e.which === 39) ? 8 : 0;
+       break;
+     case 8:
+       index = (e.which === 66) ? 9 : 0;
+       break;
+     case 9:
+       index = (e.which === 65) ? 10 : 0;
+       break;
+     default:
+       index = 0;
+   }
+   checkKonami();
+ })
+}
+ function checkKonami(){
+  if(index === codes.length){
+    console.log("konami");
+    window.alert("konami");
+    index = 0;
   }
- }
+}	
