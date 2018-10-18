@@ -1,9 +1,20 @@
-const Code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 	
 
 
   
-
+const Code = [
+    `ArrowUp`,
+    `ArrowUp`,
+    `ArrowDown`,
+    `ArrowDown`,
+    `ArrowLeft`,
+    `ArrowRight`,
+    `ArrowLeft`,
+    `ArrowRight`,
+    `b`,
+    `a`
+  ];
 
 function init() {
   let step = 0;
