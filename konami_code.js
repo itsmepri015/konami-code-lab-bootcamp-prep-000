@@ -16,7 +16,7 @@ const Code = [
 
 function init() {
   let step = 0;
-  document.addEventListener(`keydown`, function(press) {
+  document.body.addEventListener(`keydown`, function(press) {
     const button = press.key;
     if (button === Code[step]) {
       step++;
