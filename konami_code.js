@@ -18,7 +18,7 @@ function init() {
     const button = press.key;
     if (button === Code[step]) {
       step++;
-      if (step === Code.length) {
+      if (step === 8) {
         alert(`Konami Code entered!`);
         step = 0;
       }
