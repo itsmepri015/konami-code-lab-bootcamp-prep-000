@@ -2,19 +2,19 @@
 const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 	function init() {
  
-   let codeCount = 0;
+   let index = 0;
   
   document.body.addEventListener('keydown', function(e) {
     let keyPressed = e.key;
-    if (keyPressed === updatedCode[codeCount]) {
+    if (keyPressed === code[index]) {
       codeCount++;
       
-      if (codeCount === updatedCode.length) {
+      if (index === code.length) {
         alert('Congratulations!');
-        codeCount = 0;
+        index = 0;
       }
     } else {
-      codeCount = 0;
+      index = 0;
     }
   });
 } 	
