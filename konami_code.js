@@ -8,7 +8,7 @@ let index = 0;
     const key = e.key;
      if(key === codes[index]){
       index++;
-       if(index === codes.length){
+       if(index === 9){
         alert("Yay! You did it!");
         index = 0;
       }
