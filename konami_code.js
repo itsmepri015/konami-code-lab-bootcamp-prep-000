@@ -1,36 +1,19 @@
-var allowedKeys = {
-  37: 'left',
-  38: 'up',
-  39: 'right',
-  40: 'down',
-  65: 'a',
-  66: 'b'
-};
-const Code = [
-    `ArrowUp`,
-    `ArrowUp`,
-    `ArrowDown`,
-    `ArrowDown`,
-    `ArrowLeft`,
-    `ArrowRight`,
-    `ArrowLeft`,
-    `ArrowRight`,
-    `b`,
-    `a`
-  ];
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+	
 
-function init() {
-  let step = 0;
-  document.body.addEventListener(`keydown`, function(press) {
-   var button = allowedKeys[e.keyCode];
-    if (button === Code[step]) {
-      step++;
-      if (step === 9) {
-        alert(`Konami Code entered!`);
-        step = 0;
+let index = 0;
+  function init() {
+  
+  document.addEventListener("keydown", function(e){
+    const key = e.key
+     if(key === code[index]){
+      index++
+       if(index === code.length){
+        alert("Yay! You did it!")
+        index = 0
       }
-    } else {
-      step = 0;
+    }else{
+      index = 0
     }
-  });
+})
 }
