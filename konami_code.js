@@ -6,7 +6,7 @@ let index = 0;
   
   document.body.addEventListener('keydown', function(e){
     const key = e.key;
-     if(key === codes[index]){
+     if(key === code[index]){
       index++;
        if(index === 9){
         alert("Yay! You did it!");
