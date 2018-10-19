@@ -1,15 +1,19 @@
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+	
 
-	if (window.addEventListener) {
-
-  var keys = [],
-        konami = "38,38,40,40,37,39,37,39,66,65";
-    
-    window.addEventListener("keydown", function(e){
-        keys.push(e.keyCode);
-        
-        if (keys.toString().indexOf(konami) >= 0) {
-            alert("lulz");
-            keys = [];
-        }
-    }, true);
+let index = 0;
+  function init() {
+  
+  document.addEventListener("keydown", function(e){
+    const key = e.key
+     if(key === code[index]){
+      index++
+       if(index === code.length){
+        alert("Yay! You did it!")
+        index = 0
+      }
+    }else{
+      index = 0
+    }
+})
 }
