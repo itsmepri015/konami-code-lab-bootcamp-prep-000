@@ -1,29 +1,19 @@
-
-const Code = [
-    `ArrowUp`,
-    `ArrowUp`,
-    `ArrowDown`,
-    `ArrowDown`,
-    `ArrowLeft`,
-    `ArrowRight`,
-    `ArrowLeft`,
-    `ArrowRight`,
-    `b`,
-    `a`
-  ];
-
-function init() {
-  let step = 0;
-  document.body.addEventListener(`keydown`, function(press) {
-    const button = press.key;
-    if (button === Code[step]) {
-      step++;
-      if (step === 9) {
-        alert(`Konami Code entered!`);
-        step = 0;
+const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+	function init() {
+ 
+   let index = 0;
+  
+  document.body.addEventListener('keydown', function(e) {
+    let keyPressed = e.key;
+    if (keyPressed === code[index]) {
+      index++;
+      
+      if (index === code.length) {
+        alert('Congratulations!');
+        index = 0;
       }
     } else {
-      step = 0;
+      index = 0;
     }
   });
-}
+} 	
