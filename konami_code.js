@@ -5,15 +5,15 @@ let index = 0;
   function init() {
   
   document.addEventListener("keydown", function(e){
-    const key = e.key;
+    const key = e.key
      if(key === code[index]){
-      index++;
+      index++
        if(index === code.length){
-        alert("Yay! You did it!");
-        index = 0;
+        alert("Yay! You did it!")
+        index = 0
       }
     }else{
-      index = 0;
+      index = 0
     }
-}, false);
+})
 }
