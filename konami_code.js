@@ -7,7 +7,7 @@ const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'Arro
   document.body.addEventListener('keydown', function(e) {
     let keyPressed = e.key;
     if (keyPressed === code[index]) {
-      codeCount++;
+      index++;
       
       if (index === code.length) {
         alert('Congratulations!');
