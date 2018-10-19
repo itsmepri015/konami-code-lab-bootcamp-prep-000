@@ -25,5 +25,5 @@ function init() {
     } else {
       step = 0;
     }
-  });
+  },false);
 }
