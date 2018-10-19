@@ -8,12 +8,12 @@ let index = 0;
     const key = e.key;
      if(key === code[index]){
       index++;
-       if(index === 9){
+       if(index === code.length){
         alert("Yay! You did it!");
         index = 0;
       }
     }else{
       index = 0;
     }
-},true);
+});
 }
