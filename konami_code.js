@@ -10,6 +10,6 @@
         if (keys.toString().indexOf(konami) >= 0) {
             alert("lulz");
             keys = [];
-        };
+        }
     }, true);
-};
+}
