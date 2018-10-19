@@ -1,19 +1,22 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 	
 
-let index = 0;
-  function init() {
+const updatedCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyA', 'KeyB'];
+	function init() {
+  // Write your JavaScript code inside the init() function	  // Write your JavaScript code inside the init() function
+   let codeCount = 0;
   
-  document.body.addEventListener("keydown", function(e){
-   const key = parseInt(e.detail || e.which)
-     if(key === code[index]){
-      index++
-       if(index === 10){
-        alert("Yay! You did it!")
-        index = 0
+  document.body.addEventListener('keydown', function(e) {
+    let keyPressed = e.location;
+    if (keyPressed === code[codeCount]) {
+      codeCount++;
+      
+      if (codeCount === code.length) {
+        alert('Congratulations!');
+        codeCount = 0;
       }
-    }else{
-      index = 0
+    } else {
+      codeCount = 0;
     }
-})
-}
+  });
+} 	
