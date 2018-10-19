@@ -22,7 +22,7 @@ const Code = [
 function init() {
   let step = 0;
   document.body.addEventListener(`keydown`, function(press) {
-    const button = allowedKeys[e.keyCode];
+   var button = allowedKeys[e.keyCode];
     if (button === Code[step]) {
       step++;
       if (step === 9) {
