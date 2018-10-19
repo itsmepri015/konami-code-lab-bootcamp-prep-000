@@ -8,10 +8,10 @@ const updatedCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft'
   
   document.body.addEventListener('keydown', function(e) {
     let keyPressed = e.location;
-    if (keyPressed === code[codeCount]) {
+    if (keyPressed === updatedCode[codeCount]) {
       codeCount++;
       
-      if (codeCount === code.length) {
+      if (codeCount === updatedCode.length) {
         alert('Congratulations!');
         codeCount = 0;
       }
