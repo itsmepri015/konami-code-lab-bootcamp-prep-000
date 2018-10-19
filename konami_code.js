@@ -8,7 +8,7 @@ let index = 0;
    const key = parseInt(e.detail || e.which)
      if(key === code[index]){
       index++
-       if(index === 9){
+       if(index === 10){
         alert("Yay! You did it!")
         index = 0
       }
